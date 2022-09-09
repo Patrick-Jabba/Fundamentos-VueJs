@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - VueJs do jeito ninja</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <div v-if="usuario.id == 1">
+            Id: {{usuario.id}},<br>
+            Nome: {{usuario.nome}},<br>
+            Profissão: {{usuario.profissao}}
+        </div>
+        <div v-else>Nenhum usuário com o Id = 1</div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 01 - VueJs do jeito ninja!",
+                usuario: {
+                    id: 1,
+                    nome: "Jon Snow",
+                    profissao: "Ator"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

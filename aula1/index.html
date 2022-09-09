@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - VueJs do jeito ninja</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <p v-if="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui repellat quam quae autem iusto
+            vel officiis minima praesentium odit sint consequatur temporibus repudiandae neque voluptatum, doloremque,
+            exercitationem laboriosam quod?
+        </p>
+        <div v-else>Não existe texto</div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                texto: true,
+                titulo: "Aula 01 - VueJs do jeito ninja!"
+            }
+        });
+    </script>
+</body>
+
+</html>

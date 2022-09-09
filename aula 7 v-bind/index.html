@@ -5,13 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01 - VueJs do jeito ninja</title>
+    <title>Aula 07 - VueJs do jeito ninja</title>
+    <style>
+        .red{
+            color:red
+        }
+
+        .green {
+            color: green
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <h1>{{ titulo }}</h1>
-        <img v-bind:src="imagem" alt="">
+        <img :src="'https://br.vuejs.org/images/logo.png'" :alt="'Vuejs is awesome!'" title="" id="" :data-img-large="'https://br.vuejs.org/images/logo.png'">
+
+        <p :class="classHtml">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatem vero ea officia. Nobis laudantium optio quo at officia, iste vero nemo vitae? Sint repellendus veritatis officia dolor, doloremque sed.
+        </p>
     </div>
 
 
@@ -21,8 +34,8 @@
             el: "#app",
             data: {
                 texto: true,
-                titulo: "Aula 01 - VueJs do jeito ninja!",
-                imagem:"https://br.vuejs.org/images/logo.png"
+                titulo: "Aula 07 - VueJs do jeito ninja!",
+                classHtml: 'green',
             }
         });
     </script>
